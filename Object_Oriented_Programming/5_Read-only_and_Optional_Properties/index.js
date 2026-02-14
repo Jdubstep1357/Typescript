@@ -1,17 +1,16 @@
 "use strict";
-// Class - Blueprint for creating objects
 Object.defineProperty(exports, "__esModule", { value: true });
-/* Class Example - Bank Account
-Properties: id, owner, balace
-Methods: Depost(), Withdraw()
-*/
 class Account {
     // need to use constructor to initialize objects
+    // can only be changed inside of the constructor and no where else
     id;
     owner;
     balance;
+    // optional label for bank account - ? makes it optional
+    nickname;
     // constructor - special function inside of class to initialize object
     constructor(id, owner, balance) {
+        // only place id can be changed. cannot change if outside of constructor due to readonly
         this.id = id;
         this.owner = owner;
         this.balance = balance;
@@ -24,11 +23,4 @@ class Account {
 }
 // new - create new object from existing class
 let account = new Account(1, 'Mosh', 0);
-account.deposit(100);
-// output: 100
-console.log(account.balance);
-// output: object
-console.log(typeof account);
-// output: true
-console.log(account instanceof Account);
 //# sourceMappingURL=index.js.map

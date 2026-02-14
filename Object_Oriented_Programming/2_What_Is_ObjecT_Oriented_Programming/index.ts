@@ -18,4 +18,5 @@ Ex: Person
 Functional Programmign is about functions
 Object-oriented focused on object
 
+
 */
