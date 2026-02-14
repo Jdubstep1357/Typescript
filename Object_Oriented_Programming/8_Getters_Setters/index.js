@@ -12,7 +12,6 @@ class Account {
     _balance;
     nickname;
     // constructor - special function inside of class to initialize object
-    // public - instead of using at id at top, using public
     // Parameter properties
     constructor(id, owner, _balance) {
         this.id = id;
@@ -28,10 +27,19 @@ class Account {
     // will not show function when using a.METHODSSHOWNHERE
     calculateTax() {
     }
-    getBalance() {
+    // GETTER - method inside of class for getting value of property
+    get balance() {
         return this._balance;
+    }
+    // SETTER - sets value of property - good for validation
+    set balance(value) {
+        if (value < 0)
+            throw new Error('Invalid value');
+        this._balance = value;
     }
 }
 let account = new Account(1, 'Mosh', 0);
-console.log(account.getBalance());
+// balance comes up from top
+console.log(account.balance);
+account.balance = 1;
 //# sourceMappingURL=index.js.map
