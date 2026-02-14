@@ -1,14 +1,10 @@
 "use strict";
-// union - give variable or function parameter more than one type
 Object.defineProperty(exports, "__esModule", { value: true });
-function kgToLbs(weight) {
-    // Narrowing
-    if (typeof weight === 'number') {
-        return weight * 2.2;
-    }
+function greet(name) {
+    if (name)
+        console.log(name.toUpperCase);
     else
-        return parseInt(weight) * 2.2;
+        console.log('Hola!');
 }
-kgToLbs(10);
-kgToLbs('10kg');
+greet(undefined);
 //# sourceMappingURL=index.js.map
