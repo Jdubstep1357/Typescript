@@ -1,19 +1,9 @@
 // Interfaces
 // define shapes of objects
 
-/* 
-class Calendars
-google, iCal, Outlook
-All have similar properties and methods
-*/
-
-// abstract class Calendar {
-//     constructor(public name: string) {}
-
-//     abstract addEvent(): void; 
-//     abstract removeEvent(): void;
-// }
-
+// IMPORTANT
+// Interface for objects
+// Types for everything else
 
 // when to use abstract vs interface?
 // if parent class doesn't have too much logic, use interface
