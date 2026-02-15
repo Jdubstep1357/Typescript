@@ -1,6 +1,6 @@
 class Ride {
 
-    // when making property static that method becomes part of 
+    // static that property with a method becomes part of 
     // a class and will have only a single instance of them in memory
 
     private static _activeRides: number = 0;
