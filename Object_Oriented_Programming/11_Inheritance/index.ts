@@ -42,3 +42,4 @@ class Students extends Person {
 }
 
 let student = new Students(1, 'John', 'doe@gmail.com');
+// this is some text
