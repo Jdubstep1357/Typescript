@@ -1,7 +1,7 @@
 // interface for presenting calling one of api end points
 
 interface Result<T> {
-    data: T| null,
+    data: T | null,
     error: string | null
 }
 
