@@ -29,11 +29,8 @@ class Person {
         console.log('walking');
     }
 }
-// extends tells class Students to inherit everythign from Person
 class Students extends Person {
     studentId;
-    // public only references studentId which is unique to class Students
-    // use super to reference constructor of base / parent class
     constructor(studentId, firstName, lastName) {
         // super class
         super(firstName, lastName);
@@ -43,5 +40,14 @@ class Students extends Person {
         console.log('Taking test');
     }
 }
-let student = new Students(1, 'John', 'doe@gmail.com');
+class Teacher extends Person {
+    // override tells compiler changing implementation of method
+    get fullName() {
+        // super references base class
+        return 'Professor ' + super.fullName;
+    }
+}
+let teacher = new Teacher('John', 'Smith');
+// Output: Professor John Smith
+console.log(teacher.fullName);
 //# sourceMappingURL=index.js.map

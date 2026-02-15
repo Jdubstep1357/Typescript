@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Ride {
-    // when making property static that method becomes part of 
+    // static that property with a method becomes part of 
     // a class and will have only a single instance of them in memory
     static _activeRides = 0;
     start() { Ride._activeRides++; }

@@ -1,20 +1,13 @@
 "use strict";
 /*
-Student
-Properties - FName, LName, FullName
-Methods - Walk(), Talk()
-
-Teacher
-Properties - FName, LName, FullName
-Methods - Walk(), Talk()
-
-Both Student and Teacher have same properties and methods
-better to have inheritance than writing code twice
-
-Have parent class Person
-
+// Polymorphism -  Many forms
+// refers to objects taking many different forms
 */
 Object.defineProperty(exports, "__esModule", { value: true });
+/* Open Closed Principle:
+-- Classes should be open for extension and closed for modification
+
+*/
 class Person {
     firstName;
     lastname;
@@ -29,11 +22,8 @@ class Person {
         console.log('walking');
     }
 }
-// extends tells class Students to inherit everythign from Person
 class Students extends Person {
     studentId;
-    // public only references studentId which is unique to class Students
-    // use super to reference constructor of base / parent class
     constructor(studentId, firstName, lastName) {
         // super class
         super(firstName, lastName);
@@ -43,5 +33,31 @@ class Students extends Person {
         console.log('Taking test');
     }
 }
-let student = new Students(1, 'John', 'doe@gmail.com');
+class Teacher extends Person {
+    // override tells compiler changing implementation of method
+    get fullName() {
+        // super references base class
+        return 'Professor ' + super.fullName;
+    }
+}
+class Principal extends Person {
+    get fullName() {
+        return 'Principal' + super.fullName;
+    }
+}
+// add student or teacher objects - Polymorphism
+printNames([
+    new Students(1, 'John', 'Smith'),
+    new Teacher('Mosh', 'H'),
+    new Principal('Mary', 'Smith')
+    // Outpuit: John Smith, Professor Mosh H, Principal Mary Smith
+]);
+function printNames(people) {
+    // person is of object Person
+    // each iteration has different form
+    // print names 1) student 2) teacher
+    // fullName gets 2 different forms
+    for (let person of people)
+        console.log(person.fullName);
+}
 //# sourceMappingURL=index.js.map
