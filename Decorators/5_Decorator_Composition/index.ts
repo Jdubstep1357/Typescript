@@ -22,7 +22,10 @@ function Pipe(constructor: Function) {
 @Component({ selector: '#my-profile' })
 @Pipe 
 
-
+// Output:
+// 1) Pipe decorator called
+// 2) Component decorator called
+// reason Pipe called first: f(x(g)) 
 
 class ProfileComponent {
 
