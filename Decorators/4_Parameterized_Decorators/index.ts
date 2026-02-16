@@ -11,7 +11,6 @@ function Component(options: ComponentOptions) {
             console.log('Inserting the component in the DOM');
         }
     }
-    
 }
 
 @Component({ selector: '#my-profile' })
