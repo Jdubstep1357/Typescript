@@ -16,5 +16,5 @@ store.add({ name: 'a', price: 1 });
 store.find('name', 'a');
 store.find('name', 1);
 // use key of operator to catch problem
-store.find('noExistingProperty', 1);
+// store.find('noExistingProperty', 1);
 //# sourceMappingURL=index.js.map
